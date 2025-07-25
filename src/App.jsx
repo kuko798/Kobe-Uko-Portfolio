@@ -1,33 +1,29 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { HashRouter, Route, Routes } from 'react-router'
 import './App.css'
+import KobeUkoLayout from './componets/structural/KobeUkoLayout'
+import AboutMe from './componets/AboutMe'
+import MyWork from './componets/MyWork'
+import Header from './componets/Header'
+import Experience from './componets/Experience'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <HashRouter>
+    <Routes>
+      <Route path="/" element={<KobeUkoLayout/>}>
+      <Route index element={<Header/>}/>
+      <Route path="/about-me" element={<AboutMe/>}/>
+      <Route path="/experience" element={<Experience/>}/>
+      <Route path="/my-work" element={<MyWork/>}/> 
+      </Route>
+    </Routes>
+  </HashRouter>
     </>
   )
 }
