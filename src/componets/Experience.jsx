@@ -27,7 +27,7 @@ export default function Experience(){
                             }
                             ]
     return <div>
-        <h1 style={{textAlign:"center"}}>My Corperate Journey</h1>
+        <h1 style={{textAlign:"center"}}>My Corporate Journey</h1>
        <Row>{experiences.map((experience, index) => <Col xs={12} sm={12} md={6} lg={4} xl={3} key={index}><Card style={{alignItems:"center", margin:"auto", padding:"1em", height:"100px", width:"100px"}} ><ImLocation2 /></Card><h2 style={{textAlign:'center'}}>{experience.comp}</h2> <p style={{textAlign:'center'}}>{experience.desc}</p></Col>)}</Row> 
            </div>
 }

@@ -8,6 +8,7 @@ import AboutMe from './componets/AboutMe'
 import MyWork from './componets/MyWork'
 import Header from './componets/Header'
 import Experience from './componets/Experience'
+import Footer from './componets/Footer'
 
 function App() {
  
@@ -15,15 +16,20 @@ function App() {
   return (
     <>
     <HashRouter>
-    <Routes>
-      <Route path="/" element={<KobeUkoLayout/>}>
-      <Route index element={<Header/>}/>
-      <Route path="/about-me" element={<AboutMe/>}/>
-      <Route path="/experience" element={<Experience/>}/>
-      <Route path="/my-work" element={<MyWork/>}/> 
-      </Route>
-    </Routes>
-  </HashRouter>
+  <Routes>
+    <Route path="/" element={<KobeUkoLayout />}>
+      <Route index element={
+        <>
+          <section id="home"><Header /></section>
+          <section id="about-me"><AboutMe /></section>
+          <section id="experience"><Experience /></section>
+          <section id="my-work"><MyWork /></section>
+          <section id="footer"><Footer/></section>
+        </>
+      } />
+    </Route>
+  </Routes>
+</HashRouter>
     </>
   )
 }

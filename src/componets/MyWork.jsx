@@ -13,11 +13,11 @@ export default function MyWork(){
             url:"https://thurldetailz.com/"}
                     
                     ]
-    return<div style={{textAlign:"center"}}>
+    return<div style={{textAlign:"center", paddingBottom:"10em"}}>
         <h1 >My Work</h1>
       <Row>{work.map((item, index) => 
-           <Col> <a href={item.url}>
-            <Image key={index} style={{height: "200px", width:"100%",borderRadius:"5%"}}src={item.img} alt="image of work"/> </a>
+           <Col key={index} xs={12} sm={12} md={6} lg={4} xl={4} style={{paddingBottom:"1em"}}> <a href={item.url}>
+            <Image  style={{height: "200px", width:"100%",borderRadius:"5%"}}src={item.img} alt="image of work"/> </a>
            </Col>) }</Row>
         </div>
 }

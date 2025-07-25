@@ -6,7 +6,7 @@ export default function AboutMe(){
                 <h1 style={{textAlign:"center"}}>About Me</h1>
                 <Row>
                     <Col>
-                        <Image style={{width:"100%", height:"100%", borderRadius:"5%"}} src={'https://github.com/kuko798/KobeUko/blob/main/Screenshot%202025-01-05%20020653.png?raw=true'}/>
+                        <Image style={{width:"100%", height:"100%", borderRadius:"5%", paddingBottom:"10em"}} src={'https://github.com/kuko798/KobeUko/blob/main/Screenshot%202025-01-05%20020653.png?raw=true'}/>
                     </Col>
                     <Col>
                         <ul style={{listStyle:"none", marginTop:"10px", textAlign:"left"}}>

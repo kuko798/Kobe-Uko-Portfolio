@@ -5,7 +5,7 @@
         font-family: 'Poppins', sans-serif;
     }
 
-                .frontpage{
+.frontpage{
     padding-top: 100px;
     background: url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true");
     align-items: center;
@@ -19,7 +19,7 @@
     display: flexbox;
     background-attachment: fixed;
     align-items: center;
-    overflow: hidden;
+ 
 
     
 
@@ -43,4 +43,18 @@
 	    
     }
 
+  }
+
+   nav .me-auto li a:hover {
+  color: #ff3d00;
+}
+
+  .footer{
+    background: url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true");
+    opacity: 40%;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
