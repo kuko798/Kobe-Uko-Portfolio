@@ -6,7 +6,7 @@ export default function Experience(){
     const experiences = [{comp:"DevHeads",
                              desc:"A company started by me and friend from back home which turned into something big. What went from creating website for small businesses spawned into something big! The creation of the Connect platform. In the early stages I was able to help in the creation of the platform which at the time hosted 300+ users",
                             img:""},
-                            {comp:"DevlopersMeet",
+                            {comp:"DevelopersMeet",
                              desc: "I thought to myself... what if we could make a tinder for developers. Developers meet was a platform I created back in 2023 with the sole aim of being a platform where you can find developers for projects you want to do. Without the hassel of open source it gives you the chance of vetting out people.",
                              img:""  
                             },
