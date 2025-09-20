@@ -12,7 +12,7 @@ export default function AboutMe(){
                         <ul style={{listStyle:"none", marginTop:"10px", textAlign:"left"}}>
            
                             <li>Name: Kobe Uko</li>
-                            <li>School: University of Wiscosnin Madison</li>
+                            <li>School: University of Wisconsin Madison</li>
                             <li>Major: Computer Science</li>
                             <li>Year: Senior</li>
                             <li>Hometown: Saint Louis, Missouri</li>
