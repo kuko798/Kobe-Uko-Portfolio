@@ -434,10 +434,6 @@ body {
   animation-delay: 0.42s;
 }
 
-.footer .reveal.is-visible .links li:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .site-navbar,
   .hero-line {
@@ -474,95 +470,4 @@ body {
     transform: none;
     box-shadow: var(--shadow);
   }
-
-  .chapter-carousel.carousel .carousel-item,
-  .chapter-carousel.carousel .carousel-item * {
-    transition: none !important;
-  }
-}
-
-/* —— Omega / Epsilon Theta carousel —— */
-.chapter-section {
-  padding-top: clamp(2rem, 5vw, 3.5rem);
-}
-
-.chapter-carousel.carousel {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: var(--shadow);
-  background: var(--color-bg);
-}
-
-.chapter-carousel .carousel-control-prev,
-.chapter-carousel .carousel-control-next {
-  width: min(12%, 5rem);
-  opacity: 0.9;
-}
-
-.chapter-carousel .carousel-indicators {
-  margin-bottom: 0.5rem;
-}
-
-.chapter-carousel .carousel-indicators [data-bs-target] {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-}
-
-.chapter-slide-banner {
-  background: #2d1b45;
-}
-
-.chapter-slide-banner-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(1.25rem, 4vw, 2.75rem);
-  min-height: 240px;
-}
-
-.chapter-banner-image {
-  display: block;
-  max-width: min(100%, 960px);
-  width: auto;
-  height: auto;
-  max-height: min(42vw, 300px);
-  object-fit: contain;
-  object-position: center;
-}
-
-.chapter-slide-gallery {
-  background: #f5f0e8;
-}
-
-.chapter-slide-gallery-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(0.75rem, 2vw, 1.25rem);
-}
-
-.chapter-gallery-image {
-  display: block;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  max-height: min(72vh, 720px);
-  object-fit: contain;
-  object-position: center;
-}
-
-.chapter-caption {
-  bottom: 0.75rem;
-  padding-bottom: 0.35rem;
-}
-
-.chapter-caption span {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 500;
 }
