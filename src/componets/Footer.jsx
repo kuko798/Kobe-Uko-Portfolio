@@ -14,6 +14,9 @@ export default function Footer() {
                 <a href="#about-me">About Me</a>
               </li>
               <li>
+                <a href="#chapter">Chapter</a>
+              </li>
+              <li>
                 <a href="#experience">Experience</a>
               </li>
               <li>

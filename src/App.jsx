@@ -6,6 +6,7 @@ import MyWork from "./componets/MyWork";
 import Header from "./componets/Header";
 import Experience from "./componets/Experience";
 import Footer from "./componets/Footer";
+import OmegaChapterCarousel from "./componets/OmegaChapterCarousel";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
                 </section>
                 <section id="about-me">
                   <AboutMe />
+                </section>
+                <section id="chapter">
+                  <OmegaChapterCarousel />
                 </section>
                 <section id="experience">
                   <Experience />

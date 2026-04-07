@@ -25,6 +25,9 @@ export default function KobeUkoLayout() {
               <Nav.Link as={HashLink} smooth to="#about-me">
                 About Me
               </Nav.Link>
+              <Nav.Link as={HashLink} smooth to="#chapter">
+                Chapter
+              </Nav.Link>
               <Nav.Link as={HashLink} smooth to="#experience">
                 Experience
               </Nav.Link>
