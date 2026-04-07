@@ -20,8 +20,8 @@ export default function Experience() {
       desc: "I worked on the Gameplan fleet management app. I tested API endpoints using Python, requests, and pytest, verified data with SQL against a test dataset, and my testing surfaced bugs that led to database updates. I also built a Scala logging tool to flag slow requests. Lastly, I pitched a new product in an intern idea jam with a team of four.",
     },
     {
-      comp: "Coming Soon",
-      desc: "We will see where things go next—maybe a real Tinder-style app for developers.",
+      comp: "IBM",
+      desc: "Incoming AI Customer Success Engineer, starting in June 2026",
     },
   ];
 
