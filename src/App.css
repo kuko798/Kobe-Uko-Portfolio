@@ -1,60 +1,291 @@
- *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
-.frontpage{
-    padding-top: 100px;
-    background: url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true");
-    align-items: center;
-    overflow: hidden;
-
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-    display: flexbox;
-    background-attachment: fixed;
-    align-items: center;
- 
-
-    
-
-}
-        
-.frontpage h1{
-    font-size: 60px;
-	color: #fff;
-	padding-top: 150px;
-	margin-left: 30px;
-    text-align: center;
+:root {
+  --color-bg: #0f1419;
+  --color-surface: #1a2332;
+  --color-text: #e8eaed;
+  --color-text-muted: #9aa0a6;
+  --color-accent: #ff6b35;
+  --color-accent-hover: #ff8555;
+  --section-padding-y: clamp(3rem, 8vw, 5.5rem);
+  --content-max: 72rem;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* —— Hero —— */
+.frontpage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 6rem 1.5rem 4rem;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(15, 20, 25, 0.88) 0%, rgba(26, 35, 50, 0.75) 100%),
+    url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true")
+      center center / cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.frontpage-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 42rem;
+}
+
+.frontpage h1 {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+.frontpage .hero-tagline {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frontpage .hero-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.frontpage .hero-cta:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
 
 @media (max-width: 768px) {
-    .frontpage {
-        
-    
-        background-attachment: scroll; 
-        
-	    
-    }
-
+  .frontpage {
+    background-attachment: scroll;
+    padding-top: 5rem;
   }
-
-   nav .me-auto li a:hover {
-  color: #ff3d00;
 }
 
-  .footer{
-    background: url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true");
-    opacity: 40%;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+/* —— Sections —— */
+.page-section {
+  padding: var(--section-padding-y) 1.25rem;
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+/* —— About —— */
+.about-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-photo {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.about-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.about-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.about-list li:last-child {
+  border-bottom: none;
+}
+
+.about-list strong {
+  color: var(--color-text);
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+/* —— Experience cards —— */
+.experience-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  height: 100%;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  border-color: rgba(255, 107, 53, 0.35);
+  transform: translateY(-4px);
+}
+
+.experience-card .card-body {
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+.experience-card .card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.experience-card .card-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* —— Work grid —— */
+.work-card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.2s ease;
+  background: var(--color-surface);
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 53, 0.4);
+}
+
+.work-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card-caption {
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+/* —— Footer —— */
+.footer {
+  position: relative;
+  padding: clamp(3rem, 6vw, 4.5rem) 1.25rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(15, 20, 25, 0.92) 0%, rgba(15, 20, 25, 0.97) 100%),
+    url("https://github.com/kuko798/KobeUko/blob/main/ColorStack%20Headshots3801.JPG?raw=true")
+      center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.footer h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.footer .links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer .links a:hover {
+  color: var(--color-accent);
+}
+
+.footer .links li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background-attachment: scroll;
   }
+}
+
+/* —— Navbar (Bootstrap overrides) —— */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--color-accent);
+}
+
+.site-brand {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+.site-brand:hover {
+  color: var(--color-accent) !important;
+}
