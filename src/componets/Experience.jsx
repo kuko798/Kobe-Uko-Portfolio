@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import Reveal from "./Reveal";
 
 export default function Experience() {
   const experiences = [
@@ -27,17 +28,19 @@ export default function Experience() {
 
   return (
     <Container fluid className="page-section">
-      <h2 className="section-title">My Corporate Journey</h2>
+      <Reveal>
+        <h2 className="section-title">My Corporate Journey</h2>
+      </Reveal>
       <Row className="g-4">
         {experiences.map((experience, index) => (
-          <Col key={index} xs={12} md={6} xl={4}>
+          <Reveal as={Col} key={experience.comp} xs={12} md={6} xl={4} delay={index * 75}>
             <Card className="experience-card">
               <Card.Body>
                 <Card.Title as="h3">{experience.comp}</Card.Title>
                 <Card.Text>{experience.desc}</Card.Text>
               </Card.Body>
             </Card>
-          </Col>
+          </Reveal>
         ))}
       </Row>
     </Container>

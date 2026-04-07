@@ -5,7 +5,13 @@ import { HashLink } from "react-router-hash-link";
 export default function KobeUkoLayout() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="border-bottom border-secondary border-opacity-25">
+      <Navbar
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        sticky="top"
+        className="site-navbar border-bottom border-secondary border-opacity-25"
+      >
         <Container>
           <Navbar.Brand as={HashLink} smooth to="#home" className="site-brand">
             Kobe Uko

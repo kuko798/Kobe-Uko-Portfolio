@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import Reveal from "./Reveal";
 
 export default function MyWork() {
   const work = [
@@ -22,15 +23,19 @@ export default function MyWork() {
 
   return (
     <Container fluid className="page-section" style={{ paddingBottom: "4rem" }}>
-      <h2 className="section-title">My Work</h2>
+      <Reveal>
+        <h2 className="section-title">My Work</h2>
+      </Reveal>
       <Row className="g-4 justify-content-center">
         {work.map((item, index) => (
-          <Col key={index} xs={12} sm={6} lg={4}>
+          <Reveal as={Col} key={item.url} xs={12} sm={6} lg={4} delay={index * 90}>
             <a href={item.url} className="work-card text-decoration-none" target="_blank" rel="noopener noreferrer">
-              <Image src={item.img} alt={item.label} fluid />
+              <div className="work-card-img-wrap">
+                <Image src={item.img} alt={item.label} fluid />
+              </div>
               <div className="work-card-caption">{item.label}</div>
             </a>
-          </Col>
+          </Reveal>
         ))}
       </Row>
     </Container>

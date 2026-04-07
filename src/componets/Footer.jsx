@@ -1,10 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import Reveal from "./Reveal";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <Container fluid className="footer-inner">
+      <Reveal as={Container} fluid className="footer-inner">
         <Row>
           <Col xs={12} md={6} lg={4}>
             <h4>Info</h4>
@@ -29,7 +30,7 @@ export default function Footer() {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Reveal>
     </footer>
   );
 }
